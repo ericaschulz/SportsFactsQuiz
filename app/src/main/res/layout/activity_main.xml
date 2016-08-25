@@ -44,34 +44,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="name"
+        android:text="@string/NHL"
         android:id="@+id/athlete_name"
         android:layout_above="@+id/btn_true"
         android:layout_marginBottom="111dp"
         android:textSize="20dp"
         android:textColor="#ffffff" />
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text=" sport"-->
-        <!--android:id="@+id/athlete_sport"-->
-        <!--android:textSize="20dp"-->
-        <!--android:textColor="#ffffff"-->
-        <!--android:layout_alignTop="@+id/athlete_name"-->
-        <!--android:layout_alignLeft="@+id/athlete_award"-->
-        <!--android:layout_alignStart="@+id/athlete_award"-->
-        <!--android:layout_marginTop="34dp" />-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" award"
-        android:id="@+id/athlete_award"
-        android:textSize="20dp"
-        android:textColor="#ffffff"
-        android:layout_alignTop="@+id/athlete_name"
-        android:layout_alignLeft="@+id/btn_false"
-        android:layout_alignStart="@+id/btn_false" />
 
 </RelativeLayout>

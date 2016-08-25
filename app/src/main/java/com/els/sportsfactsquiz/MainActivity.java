@@ -1,6 +1,7 @@
 package com.els.sportsfactsquiz;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -45,54 +46,56 @@ public class MainActivity extends AppCompatActivity {
         mBtnFalse = (Button) findViewById(R.id.btn_false);
         mTxtName = (TextView) findViewById(R.id.athlete_name);
 //        mTxtSport = (TextView) findViewById(R.id.athlete_sport);
-        mTxtAward = (TextView) findViewById(R.id.athlete_award);
+//        mTxtAward = (TextView) findViewById(R.id.athlete_award);
 
 
-        updateQuestionText(mAthlete[currentQuestion]);
-
-
+//        updateQuestionText(mAthlete[currentQuestion]);
+//
+//
         mBtnTrue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                submitAnswer(true, mAthlete[currentQuestion].isTrue);
+                Intent mMeetIntent = new Intent(MainActivity.this, AnswerActivity.class);
+
+                startActivity(mMeetIntent);
             }
         });
+//
+//        mBtnFalse.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                submitAnswer(false, mAthlete[currentQuestion].isTrue);
+//            }
+//        });
+//    }
 
-        mBtnFalse.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                submitAnswer(false, mAthlete[currentQuestion].isTrue);
-            }
-        });
-    }
-
-    public void submitAnswer(boolean answer, boolean isTrue) {
-
-        if (isTrue == false && answer == true) {
-            // correct answer
-            isRight = true;
-            changeQuestion();
-        } else if (isTrue == true && answer == false) {
-            // incorrect answer
-            isRight = false;
-            changeQuestion();
-        }
-
-    }
-
-
-    public void changeQuestion() {
-        if(currentQuestion<mAthlete.length) {
-            updateQuestionText(mAthlete[currentQuestion]);
-            currentQuestion++;
-        }
-    }
-
-    public void updateQuestionText(Athlete Athlete) {
-        mTxtName.setText(Athlete.getmName());
-        mTxtSport.setText(Athlete.getmSport());
-        mTxtAward.setText(Athlete.getmAward());
-
+//    public void submitAnswer(boolean answer, boolean isTrue) {
+//
+//        if (isTrue == false && answer == true) {
+//            // correct answer
+//            isRight = true;
+//            changeQuestion();
+//        } else if (isTrue == true && answer == false) {
+//            // incorrect answer
+//            isRight = false;
+//            changeQuestion();
+//        }
 
     }
-}
+
+
+//    public void changeQuestion() {
+//        if(currentQuestion<mAthlete.length) {
+//            updateQuestionText(mAthlete[currentQuestion]);
+//            currentQuestion++;
+//        }
+    }
+
+//    public void updateQuestionText(Athlete Athlete) {
+//        mTxtName.setText(Athlete.getmName());
+//        mTxtSport.setText(Athlete.getmSport());
+//        mTxtAward.setText(Athlete.getmAward());
+//
+
+
+
